@@ -1,13 +1,13 @@
-1. git init: để cho project của mình vào work space
+1. git init: khởi tạo thư mục được quản lí bởi git (working directory)
 git add <file_name>: để cho một file có tên <file_name> di chuyển vào staging space sau khi có sự sửa đổi ở file đó
-git add .: cho tất cả các file có sự chỉnh sửa trong project vào staging space
-git commit -m 'message': di chuyển các sự thay đổi vào remote space
+git add .: cho tất cả các file có sự chỉnh sửa trong project từ working directory vào staging space
+git commit -m 'message': tạo 1 commit có message
 
 2. tạo 1 folder lesson-2
 a, tạo 3 file: file1, file2, file3
 b, git init: cho folder lesson2 vào vùng work space
-c, git commit -m "init project": cho folder lesson-2 vào vùng remote
+c, git commit -m "init project": cho folder lesson-2 vào vùng working directory(chưa add thì éo chạy được)
 d, git add file1: cho file "file1" vào vùng staging
 e, git commit -m "add file1": cho file vào vùng remote
-f, git add file: không rõ (cho tất cả các file có name bắt đàu bằng file vào vùng staging??)
+f, git add file: éo có j xảy ra
 
