@@ -1,0 +1,66 @@
+1, git commit --amend: sửa comment của commit
+   git commit --amned -m "<message>": sửa cmt của commit bằng 1 commit mới
+   git restore --staged <file>: cho code ở vùng staging trở về vùng working directory
+   git reset HEAD~1: cho code vừa commit ở vùng repository về vùng working directory, các commit được xếp theo stack
+
+2, tạo file lesson-3
+a, tạo 3 file: file1, file2, file3
+vùng working: k
+vùng staging: k
+vùng repository: k
+b, chạy git init
+vùng working: file1, file2, file3
+vùng staging: k
+vùng repository: k
+c, chạy git commit -m "init project"
+vùng working: file1, file2, file3
+vùng staging: k
+vùng repository: k
+d, chạy git add file1
+vùng working: file2, file3
+vùng staging: file1
+vùng repository: k
+e, chạy git commit -m "add file"
+vùng working: file2, file3
+vùng staging: k
+vùng repository: file1
+f, chạy git add .
+vùng working: k
+vùng staging: file2, file3
+vùng repository: file1
+g, chạy git restore --staged file2
+vùng working: file2
+vùng staging: file3
+vùng repository: file1
+h, chạy git commit -m "add all files"
+vùng working: file2
+vùng staging: kk
+vùng repository: file1, file3
+i, chạy git reset HEAD~1
+vùng working: file2, file33
+vùng staging: k
+vùng repository: file1
+
+3, tạo folder lesson-3-gitgit
+a, chạy git init
+vùng working: k
+vùng staging: k
+vùng repository: k
+b, tạo file file1.txt, file2.txt, oops/file3.txt
+vùng working: file1.txt, file2.txt, oops/file3.txt
+vùng staging: k
+vùng repository: k
+c, thêm file .gitignore, thêm 2 dòng:
+  - filee1.txt
+  - oops/
+vùng working: file2.txt
+vùng staging: k
+vùng repository: k
+d, chạy lệnh git add .
+vùng working: k
+vùng staging: file2.txt
+vùng repository: k
+e, chạy git commit-m "init project"
+vùng working: k
+vùng staging: k
+vùng repository: file2.txt
